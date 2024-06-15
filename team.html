@@ -32,9 +32,34 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+  <style>
+    .box {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .img-box {
+      flex: 1;
+    }
+
+    .detail-box {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .social_box {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .social_box a {
+      margin: 0 5px;
+    }
+  </style>
 </head>
 
-<body>
+<body class="sub_page">
 
   <div class="hero_area">
 
@@ -50,7 +75,7 @@
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
             <span>
-              patAInt
+              Finexo
             </span>
           </a>
 
@@ -60,179 +85,39 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  ">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"> About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="service.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="why.html">Why Us</a>
+              </li>
               <li class="nav-item active">
-                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="team.html">Team <span class="sr-only">(current)</span> </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#demo">Demo</a>
+                <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#tech">Technology</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#team">Team</a>
-              </li>
+              <form class="form-inline">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
             </ul>
           </div>
         </nav>
       </div>
     </header>
     <!-- end header section -->
-
-    <!-- slider section -->
-    <section class="slider_section ">
-      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-6 ">
-                  <div class="detail-box">
-                    <h1>
-                      An alert <br>
-                      that can save your life
-                    </h1>
-                    <p>
-                      Around 42-49% of the adult population is affected by hypertension in Spain.
-                      Preventive medicine can reduce this by 30%.
-                    </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Read More
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="img-box">
-                    <img src="images/slider-img.png" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-    <!-- end slider section -->
   </div>
 
-
-  <!-- service section -->
-
-  <section id="demo" class="service_section layout_padding">
-    <div class="service_container">
-      <div class="container ">
-        <div class="heading_container heading_center">
-          <h2>
-            Our <span>Demo</span>
-          </h2>
-          <p>
-            An application that analyzes hypertension patients' biomakers to alert them to go to the doctor in case of decompensation
-          </p>
-        </div>
-        <div style="justify-content: center;" class="row">
-          <!-- <div class="col-md-4 ">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/s1.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Currency Wallet
-                </h5>
-                <p>
-                  fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                  The
-                  point of using
-                </p>
-                <a href="">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/s2.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Security Storage
-                </h5>
-                <p>
-                  fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                  The
-                  point of using
-                </p>
-                <a href="">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/s3.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Expert Support
-                </h5>
-                <p>
-                  fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                  The
-                  point of using
-                </p>
-                <a href="">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div> -->
-          
-          <img style="width: 25%;" src="images/symt.jpeg"/>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-
-  <!-- end service section -->
-
-
-  <!-- about section -->
-
-  <section id="tech" class="team_section layout_padding">
-    <div class="container  ">
-      <div class="heading_container heading_center">
-        <h2>
-          The <span>Technology</span>
-        </h2>
-        <p>
-          PatAInt uses CNNs (Convolutional Neural Networks) units for analyzing and retrieving information from diagnostic images,
-          and LSTM (Long short-term memory) units which are designed to get temporal patterns from data.
-          Patients are our cornerstone, and preserving their privacy is essential following the GDPR.
-        </p>
-      </div>
-      <div class="row">
-        <div class="col-md-12 ">
-          <div class="img-box">
-            <img src="images/model.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end about section -->
-
-
   <!-- team section -->
-  <section class="why_section layout_padding">
+  <section class="team_section layout_padding">
     <div class="container-fluid">
       <div class="heading_container heading_center">
         <h2 class="">
@@ -245,38 +130,6 @@
           <div class="col-lg-2 col-sm-6">
             <div class="box">
               <div class="img-box">
-                <img src="images/guillermo.jpeg" class="img1" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Guillermo Chirivella Casas
-                </h5>
-                <p>
-                  CEO
-                </p>
-              </div>
-              <div class="social_box">
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2 col-sm-6">
-            <div class="box">
-              <div class="img-box">
                 <img src="images/pranjal.jpeg" class="img1" alt="">
               </div>
               <div class="detail-box">
@@ -284,7 +137,7 @@
                   Pranjal Jain <br></br>
                 </h5>
                 <p>
-                  CTO
+                  Marketing Head
                 </p>
               </div>
               <div class="social_box">
@@ -316,7 +169,7 @@
                   Jorge Gutiérrez Mantecón
                 </h5>
                 <p>
-                  Head of AI
+                  Marketing Head
                 </p>
               </div>
               <div class="social_box">
@@ -348,7 +201,39 @@
                   Alejandro Susillo Ridao
                 </h5>
                 <p>
-                  Head of Data
+                  Marketing Head
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/guillermo.jpeg" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Guillermo Chirivella Casas
+                </h5>
+                <p>
+                  Marketing Head
                 </p>
               </div>
               <div class="social_box">
@@ -380,7 +265,7 @@
                   Jaime Pineda <br></br>
                 </h5>
                 <p>
-                  Clinical Researcher
+                  Marketing Head
                 </p>
               </div>
               <div class="social_box">
@@ -407,7 +292,6 @@
     </div>
   </section>
   <!-- end team section -->
-
 
   <!-- info section -->
 
