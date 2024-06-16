@@ -24,6 +24,8 @@
   <!--owl slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-6sUdZ/1jU70/egYiTAO6Z9rr0t7cWb7ytAVF5+F14PuLxZMHPzwsBb9IS2vK6bqTyXw5zHbBkzAuN1zByT+Oag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- font awesome style -->
   <link href="css/font-awesome.min.css" rel="stylesheet" />
 
@@ -203,10 +205,170 @@
 
   <!-- end service section -->
 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service and Pricing Plans</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-6sUdZ/1jU70/egYiTAO6Z9rr0t7cWb7ytAVF5+F14PuLxZMHPzwsBb9IS2vK6bqTyXw5zHbBkzAuN1zByT+Oag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+      }
+      .heading_container {
+          text-align: center;
+          margin-bottom: 40px;
+      }
+      .heading_container h2 {
+          font-size: 2em;
+          margin-bottom: 10px;
+      }
+      .heading_container p {
+          font-size: 1.2em;
+      }
+      .row {
+          display: flex;
+          flex-wrap: wrap;
+      }
+  
+      .description {
+          font-size: 1.1em;
+      }
+      .pricing-widget {
+          border: 1px solid #ccc;
+          background-color: white;
+          padding: 20px;
+          text-align: center;
+          color: black;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .pricing-plan {
+          display: none;
+      }
+      .pricing-plan.active {
+          display: block;
+      }
+      .arrows {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          margin-top: 20px;
+      }
+      .arrow {
+          cursor: pointer;
+          padding: 10px 20px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          font-size: 1em;
+          transition: background-color 0.3s;
+      }
+      .arrow:hover {
+          background-color: #0056b3;
+          color:white;
+      }
+      .purchase-button {
+          display: inline-block;
+          margin-top: 20px;
+          padding: 10px 20px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          text-decoration: none;
+          transition: background-color 0.3s;
+          position: relative;
+      }
+      .purchase-button:hover {
+          background-color: #0056b3;
+          color:  white; 
+      }
+      .purchase-button i {
+          margin-right: 5px;
+      }
+  </style>
+  
+</head>
+<body>
+
+<!-- service and pricing plans section -->
+<section id="service-pricing" class="team_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>
+        Our <span>Service</span> and <span>Pricing Plans</span>
+      </h2>
+      <p>
+        We provide a comprehensive software solution for continuous monitoring and early detection of cardiovascular diseases. Our service leverages data from blood pressure monitors, wearables, and patient symptoms to ensure timely intervention and improved patient outcomes.
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="description">
+          <h3>What is <img style="width: 8rem; padding-bottom: 0.25rem" src="images/pataint_logo.png" alt="">?</h3>
+          <p>
+            Our software continuously monitors patient data to detect early signs of cardiovascular issues. By integrating data from blood pressure monitors, wearables, and patient-reported symptoms, we provide real-time insights and recommendations to healthcare providers, enabling timely and effective intervention.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="pricing-widget">
+          <div id="plan1" class="pricing-plan active">
+            <h3>Basic Plan</h3>
+            <p>$19.99 / month</p>
+            <a href="#" class="purchase-button"><i class="fa fa-shopping-cart"></i> Purchase now!</a>
+          </div>
+          <div id="plan2" class="pricing-plan">
+            <h3>Standard Plan</h3>
+            <p>$29.99 / month</p>
+            <a href="#" class="purchase-button"><i class="fa fa-shopping-cart"></i> Purchase now!</a>
+          </div>
+          <div id="plan3" class="pricing-plan">
+            <h3>Premium Plan</h3>
+            <p>$39.99 / month</p>
+            <a href="#" class="purchase-button"><i class="fa fa-shopping-cart"></i> Purchase now!</a>
+          </div>
+          <div class="arrows">
+            <button class="arrow" onclick="prevPlan()">&#9664; Previous</button>
+            <button class="arrow" onclick="nextPlan()">Next &#9654;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end service and pricing plans section -->
+
+<script>
+  let currentPlanIndex = 1;
+  const totalPlans = 3;
+
+  function showPlan(index) {
+      for (let i = 1; i <= totalPlans; i++) {
+          document.getElementById('plan' + i).classList.remove('active');
+      }
+      document.getElementById('plan' + index).classList.add('active');
+  }
+
+  function nextPlan() {
+      currentPlanIndex = currentPlanIndex < totalPlans ? currentPlanIndex + 1 : 1;
+      showPlan(currentPlanIndex);
+  }
+
+  function prevPlan() {
+      currentPlanIndex = currentPlanIndex > 1 ? currentPlanIndex - 1 : totalPlans;
+      showPlan(currentPlanIndex);
+  }
+</script>
 
   <!-- about section -->
 
-  <section id="tech" class="team_section layout_padding">
+  <section id="tech" class="service_section layout_padding">
     <div class="container  ">
       <div class="heading_container heading_center">
         <h2>
@@ -232,11 +394,11 @@
 
 
   <!-- team section -->
-  <section id="team" style="background-color: #ffffff;" class="team_section layout_padding">
+  <section id="team" class="team_section layout_padding">
     <div class="container-fluid">
       <div class="heading_container heading_center">
         <h2 class="">
-          <span>Our Team</span>
+          Our<span> Team</span>
         </h2>
       </div>
 
@@ -410,7 +572,7 @@
 
   <!-- about section -->
 
-  <section class="about_section layout_padding">
+  <section class="client_section layout_padding">
     <div class="container  ">
       <div class="heading_container heading_center">
         <h2>
@@ -423,7 +585,7 @@
       <div class="row">
         <div class="col-md-6 ">
           <div class="img-box">
-            <img src="images/about-img.png" alt="">
+            <img  style="width: 50rem" src="images/health-removebg-preview.png" alt="">
           </div>
         </div>
         <div class="col-md-6">
@@ -450,7 +612,7 @@
                 </li>
             </ul>
             </p>
-            <a href="">
+            <a href="" style="background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">
               Read More
             </a>
           </div>
@@ -547,7 +709,7 @@
           </h4>
           <form action="#">
             <input type="text" placeholder="Enter email" />
-            <button type="submit">
+            <button  style="background-color: #007bff;" type="submit">
               Subscribe
             </button>
           </form>
